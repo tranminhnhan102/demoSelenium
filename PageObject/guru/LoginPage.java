@@ -23,6 +23,12 @@ public class LoginPage {
 		return Constant.DRIVER.findElement(_btnLogin);
 	}
 	
+	public LoginPage navigate(String url)
+	{
+		Constant.DRIVER.navigate().to(Constant.urlGuru);
+		return new LoginPage();
+	}
+	
 	public HomePage Login(String username, String password)
 	{
 		userName().sendKeys(username);
